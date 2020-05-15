@@ -1,0 +1,41 @@
+#!/bin/sh -l
+# FILENAME: mpi.sub
+
+EXECUTABLE="./output"
+cd $PBS_O_WORKDIR
+
+mpiexec -n 1 $EXECUTABLE 1 1 1 1 240
+mpiexec -n 1 $EXECUTABLE 2 2 2 2 240
+mpiexec -n 1 $EXECUTABLE 4 4 4 4 240
+mpiexec -n 1 $EXECUTABLE 8 8 8 8 240
+mpiexec -n 1 $EXECUTABLE 8 8 4 4 240
+mpiexec -n 1 $EXECUTABLE 4 4 8 8 240
+
+mpiexec -n 2 $EXECUTABLE 1 1 1 1 240
+mpiexec -n 2 $EXECUTABLE 2 2 2 2 240
+mpiexec -n 2 $EXECUTABLE 4 4 4 4 240
+mpiexec -n 2 $EXECUTABLE 8 8 8 8 240
+mpiexec -n 2 $EXECUTABLE 8 8 4 4 240
+mpiexec -n 2 $EXECUTABLE 4 4 8 8 240
+
+mpiexec -n 4 $EXECUTABLE 1 1 1 1 240
+mpiexec -n 4 $EXECUTABLE 2 2 2 2 240
+mpiexec -n 4 $EXECUTABLE 4 4 4 4 240
+mpiexec -n 4 $EXECUTABLE 8 8 8 8 240
+mpiexec -n 4 $EXECUTABLE 8 8 4 4 240
+mpiexec -n 4 $EXECUTABLE 4 4 8 8 240
+
+mpiexec -n 8 $EXECUTABLE 1 1 1 1 240
+mpiexec -n 8 $EXECUTABLE 2 2 2 2 240
+mpiexec -n 8 $EXECUTABLE 4 4 4 4 240
+mpiexec -n 8 $EXECUTABLE 8 8 8 8 240
+mpiexec -n 8 $EXECUTABLE 8 8 4 4 240
+mpiexec -n 8 $EXECUTABLE 4 4 8 8 240
+mpiexec -n 8 $EXECUTABLE 4 4 8 8 240
+
+mpiexec -n 16 $EXECUTABLE 1 1 1 1 240
+mpiexec -n 16 $EXECUTABLE 2 2 2 2 240
+mpiexec -n 16 $EXECUTABLE 4 4 4 4 240
+mpiexec -n 16 $EXECUTABLE 8 8 8 8 240
+mpiexec -n 16 $EXECUTABLE 8 8 4 4 240
+mpiexec -n 16 $EXECUTABLE 4 4 8 8 240
