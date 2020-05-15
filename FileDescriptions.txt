@@ -1,0 +1,21 @@
+HOW TO COMPILE:
+mpiicpc -fopenmp -std=c++11 -O3 mpi_main.cpp -o output 
+mpiicpc -fopenmp -std=c++11 -O3 mpi_openmp.cpp -o output 
+
+HOW TO RUN:
+mpiexec -n <num_processes> ./output  <num_readers> <num_mappers> <num_reducers> <num_writers> <num_files>
+
+DIRECTORIES:
+InputDir/      - Input text files  here with names file00.txt - file23.txt
+OutputDir/     - Output directory where mapreduce writes word counts
+Plots/         - Output directory for gen_plot.py to generate plots from result files
+Results/       - Directory from which gen_plot.py reads mpi.sub.o* files to generate plot
+
+FILES:
+final_project_report.pdf - PDF of Final Project Report
+mpi_main.cpp             - Source code for MPI implementation of MapReduce
+mpi_openmp.cpp           - Source code for OpenMP implementation of MapReduce
+mpi.sub                  - Sample scholar submission file
+
+
+
